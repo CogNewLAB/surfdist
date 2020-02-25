@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 import surfdist as sd
+from surfdist import load, analysis, viz, utils
 
 # calculate and display distance from central sulcus at each node:
 cmap='coolwarm'
