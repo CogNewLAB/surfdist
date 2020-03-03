@@ -17,6 +17,6 @@ base_dir = '/Users/medaglialab/Desktop/geodesic_distance/'
 surf = nib.freesurfer.read_geometry(os.path.join(base_dir, 'Freesurfer_subjects/DP5.SC.1.001/surf/lh.pial'))
 cortex = np.sort(nib.freesurfer.read_label(os.path.join(base_dir, 'Freesurfer_subjects/DP5.SC.1.001/label/lh.cortex.label')))
 sulc=nib.freesurfer.read_morph_data(os.path.join(base_dir, 'Freesurfer_subjects/DP5.SC.1.001/surf/lh.sulc'))
-src = sd.load.load_freesurfer_label(os.path.join(base_dir, 'TNI009_DP5001/label/distance_labels/Network_9_lh_native.label'), cortex)
+src = sd.load.load_freesurfer_label(os.path.join(base_dir, 'TNI009_DP5001/lh_parc_result.annot'), cortex)
 
 dist = sd.analysis.dist_calc(surf, cortex, src)
